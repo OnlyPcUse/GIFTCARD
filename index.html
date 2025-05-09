@@ -21,6 +21,7 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+            -webkit-tap-highlight-color: transparent;
         }
         
         body {
@@ -30,23 +31,25 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 20px;
+            padding: 15px;
+            line-height: 1.5;
         }
         
         .card {
             width: 100%;
-            max-width: 800px;
+            max-width: 100%;
             background: white;
-            border-radius: 16px;
+            border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             position: relative;
+            margin: 10px 0;
         }
         
         .card-header {
             background: linear-gradient(to right, var(--primary), var(--secondary));
             color: white;
-            padding: 30px;
+            padding: 20px 15px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -64,29 +67,29 @@
         }
         
         .card-header h1 {
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             position: relative;
         }
         
         .card-header p {
-            font-size: 1.1rem;
+            font-size: 0.95rem;
             opacity: 0.9;
             position: relative;
         }
         
         .card-body {
-            padding: 30px;
+            padding: 20px 15px;
         }
         
         .gift-card {
             background: linear-gradient(to right, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-            border-radius: 12px;
-            padding: 25px;
+            border-radius: 10px;
+            padding: 20px 15px;
             text-align: center;
-            margin: 20px 0;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 15px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
             border: 1px solid rgba(255,255,255,0.3);
@@ -103,7 +106,7 @@
         }
         
         .gift-card h2 {
-            font-size: 1.8rem;
+            font-size: 1.4rem;
             color: var(--dark);
             margin-bottom: 10px;
             position: relative;
@@ -115,17 +118,27 @@
             position: relative;
             z-index: 1;
             font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .gift-card img {
+            max-width: 180px;
+            width: 100%;
+            margin: 12px auto;
+            display: block;
+            border-radius: 6px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
         }
         
         .timer-container {
             text-align: center;
-            margin: 30px 0;
+            margin: 25px 0;
         }
         
         .timer-label {
-            font-size: 1rem;
+            font-size: 0.9rem;
             color: #6c757d;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-weight: 600;
@@ -134,26 +147,26 @@
         .timer {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 10px;
         }
         
         .timer-segment {
             background: var(--dark);
             color: white;
-            padding: 15px 20px;
-            border-radius: 8px;
-            font-size: 2rem;
+            padding: 12px 15px;
+            border-radius: 6px;
+            font-size: 1.5rem;
             font-weight: 700;
-            min-width: 80px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            min-width: 60px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
         }
         
         .timer-segment span {
             display: block;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             font-weight: 400;
             opacity: 0.7;
-            margin-top: 5px;
+            margin-top: 3px;
         }
         
         .cta-button {
@@ -162,31 +175,31 @@
             background: linear-gradient(to right, var(--accent), #f72585c9);
             color: white;
             border: none;
-            padding: 18px;
-            font-size: 1.2rem;
+            padding: 16px;
+            font-size: 1.1rem;
             font-weight: 600;
             border-radius: 8px;
             cursor: pointer;
-            transition: all 0.3s ease;
+            transition: all 0.2s ease;
             text-align: center;
             text-decoration: none;
-            box-shadow: 0 4px 15px rgba(247, 37, 133, 0.4);
-            margin: 30px 0;
+            box-shadow: 0 4px 12px rgba(247, 37, 133, 0.4);
+            margin: 25px 0;
         }
         
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(247, 37, 133, 0.6);
+        .cta-button:hover, .cta-button:active {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(247, 37, 133, 0.5);
         }
         
         .benefits {
-            margin: 30px 0;
+            margin: 25px 0;
         }
         
         .benefits h3 {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--dark);
-            margin-bottom: 15px;
+            margin-bottom: 12px;
             position: relative;
             display: inline-block;
         }
@@ -196,7 +209,7 @@
             position: absolute;
             bottom: -5px;
             left: 0;
-            width: 50px;
+            width: 40px;
             height: 3px;
             background: var(--accent);
             border-radius: 3px;
@@ -207,10 +220,11 @@
         }
         
         .benefits li {
-            padding: 12px 0;
+            padding: 10px 0;
             border-bottom: 1px solid #eee;
             display: flex;
             align-items: center;
+            font-size: 0.95rem;
         }
         
         .benefits li:last-child {
@@ -222,36 +236,70 @@
             display: inline-block;
             color: var(--success);
             font-weight: bold;
-            margin-right: 10px;
+            margin-right: 8px;
             background: rgba(76, 201, 240, 0.1);
-            width: 26px;
-            height: 26px;
+            width: 22px;
+            height: 22px;
             border-radius: 50%;
             text-align: center;
-            line-height: 26px;
+            line-height: 22px;
+            flex-shrink: 0;
         }
         
         .disclaimer {
-            font-size: 0.75rem;
+            font-size: 0.7rem;
             color: #adb5bd;
             text-align: center;
-            margin-top: 20px;
-            line-height: 1.5;
+            margin-top: 15px;
+            line-height: 1.4;
         }
-        
-        @media (max-width: 768px) {
+
+        /* Mobile-specific optimizations */
+        @media (max-width: 480px) {
+            .card-header {
+                padding: 18px 12px;
+            }
+            
             .card-header h1 {
-                font-size: 1.8rem;
+                font-size: 1.3rem;
             }
             
             .card-header p {
-                font-size: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .gift-card {
+                padding: 18px 12px;
+            }
+            
+            .gift-card h2 {
+                font-size: 1.3rem;
+            }
+            
+            .gift-card img {
+                max-width: 150px;
             }
             
             .timer-segment {
-                font-size: 1.5rem;
-                min-width: 60px;
-                padding: 10px 15px;
+                font-size: 1.3rem;
+                min-width: 50px;
+                padding: 10px 12px;
+            }
+            
+            .cta-button {
+                padding: 14px;
+                font-size: 1rem;
+            }
+            
+            .benefits li {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Prevent zoom on input focus for mobile */
+        @media screen and (max-width: 767px) {
+            input, select, textarea {
+                font-size: 16px !important;
             }
         }
     </style>
@@ -266,6 +314,7 @@
         <div class="card-body">
             <div class="gift-card">
                 <h2>YOUR $50 GIFT CARD IS READY!</h2>
+                <img src="https://i.postimg.cc/7h68qcx1/Screenshot-19-Picsart-Ai-Image-Enhancer.png" alt="$50 Gift Card">
                 <p>Redeemable at Amazon, Walmart, Target and more after quick verification</p>
             </div>
             
@@ -318,22 +367,27 @@
 
                 if (--timer < 0) {
                     clearInterval(interval);
-                    // Optional: Show expired message or redirect
+                    // Show expired message
                     document.querySelector('.timer-label').textContent = "OFFER HAS EXPIRED!";
                     document.querySelector('.cta-button').textContent = "OFFER EXPIRED";
                     document.querySelector('.cta-button').style.background = "#adb5bd";
                     document.querySelector('.cta-button').style.boxShadow = "none";
                     document.querySelector('.cta-button').style.pointerEvents = "none";
+                    document.querySelector('.cta-button').style.transform = "none";
                 }
             }, 1000);
         }
 
-        window.onload = function () {
+        // Start timer when page loads
+        document.addEventListener('DOMContentLoaded', function() {
             const fiveMinutes = 60 * 5; // 5 minutes in seconds
             const displayMinutes = document.getElementById('minutes');
             const displaySeconds = document.getElementById('seconds');
             startTimer(fiveMinutes, displayMinutes, displaySeconds);
-        };
+        });
+
+        // Prevent form zoom on focus in mobile
+        document.addEventListener('touchstart', function() {}, true);
     </script>
 </body>
 </html>
